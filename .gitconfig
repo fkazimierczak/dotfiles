@@ -1,0 +1,33 @@
+[user]
+	email = filipkazimierczak@gmail.com
+	name = Filip Kazimierczak
+[core]
+	excludesfile = ~/.gitignore-dev
+	editor = vim
+	quotepath = false
+[alias]
+	ci = commit
+	st = status
+	br = branch
+	co = checkout
+	df = diff
+	dc = diff --cached
+        
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+        last = log -1 HEAD
+        lg = log
+        ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+        who = shortlog -s --
+        
+	dump = cat-file -p
+        type = cat-file -t
+
+        amend = commit -a --amend
+        undo = reset HEAD~1 --mixed
+        unstage = reset HEAD --
+        wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+
+        ours = "!f() { git co --ours $@ && git add $@; }; f"
+        theirs = "!f() { git co --theirs $@ && git add $@; }; f"
+[push]
+	default = simple

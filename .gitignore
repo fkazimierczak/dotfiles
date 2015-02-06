@@ -1,0 +1,10 @@
+# ignore all
+*
+
+# don't ignore git stuff
+!.gitignore
+!.gitignore-dev
+!.gitconfig
+
+# don't ignore vim stuff
+!.vimrc
