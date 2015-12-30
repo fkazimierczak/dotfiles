@@ -8,3 +8,6 @@
 
 # don't ignore vim stuff
 !.vimrc
+
+# zsh
+!.zshrc
